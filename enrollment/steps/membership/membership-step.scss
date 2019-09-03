@@ -1,0 +1,12 @@
+.membership-parts {
+  display: flex;
+  grid-direction: row;
+  .membership-part {
+    background: #fff;
+    margin-right: 40px;
+    .membership-tile-title {
+      text-align: center;
+    }
+  }
+
+}

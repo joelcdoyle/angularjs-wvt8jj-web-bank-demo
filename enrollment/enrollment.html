@@ -1,0 +1,10 @@
+<div class="enroll-container">
+	<div class="progress-column">
+		<enrollment-progress steps="$ctrl.steps"></enrollment-progress>
+		<button class="btn" type="button" ng-click="$ctrl.advanceEnrollment()" ng-disabled="!$ctrl.hasMoreSteps()">Go To Next Step</button>
+        <a ui-sref="enroll.steps.membership">Steps</a>
+  </div>
+  <div class="enrollment-column">
+    <div ui-view></div>
+  </div>
+</div>
