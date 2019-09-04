@@ -2,7 +2,7 @@ function IdentityStepConfig($stateProvider) {
   'ngInject';
 
   $stateProvider
-  .state('enrollment.steps.identity', {
+  .state('enroll.steps.identity', {
     url: '/identity',
     controller: 'IdenityStepCtrl',
     controllerAs: "$ctrl",

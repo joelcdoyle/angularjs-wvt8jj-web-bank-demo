@@ -2,13 +2,15 @@ class EnrollmentCtrl {
   constructor($scope, $uibModal, $state, enrollmentSteps) {
     'ngInject';
     var $ctrl = this;
+    this.$state = $state;
     $ctrl.steps = enrollmentSteps;
+
+    $ctrl.steps[0].active = true;
     $state.go("enroll.steps.membership");
 
     $scope.$on("advance-enrollment", (event, state) => {
       console.log(state)
       this.advanceEnrollment(state);
-      this.$state.go("enroll.steps." + state);
     });
 
     // $uibModal.open({
@@ -17,10 +19,6 @@ class EnrollmentCtrl {
   }
 
   advanceEnrollment(state) {
-    if (!this.hasMoreSteps()) {
-      return;
-    }
-
     this.steps.forEach((step) => {
       step.active = false;
     })
@@ -31,7 +29,7 @@ class EnrollmentCtrl {
       }
     });
 
-
+    this.$state.go("enroll.steps." + state);
   }
 
   hasMoreSteps() {

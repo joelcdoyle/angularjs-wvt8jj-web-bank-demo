@@ -98,7 +98,7 @@ class EnrollmentService {
   }
 
   advanceEnrollment(state) {
-    $rootScope.$broadcast("advance-enrollment", state);
+    this.$rootScope.$broadcast("advance-enrollment", state);
   }
 }
 

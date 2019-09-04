@@ -3,7 +3,7 @@ function EnrollmentStepsConfig($stateProvider) {
 
   $stateProvider
   .state('enroll.steps', {
-    url: '/steps',
+    url: '/enroll/steps',
     templateUrl: "./enroll-steps.html",
     //controller: 'StepCtrl'
   });

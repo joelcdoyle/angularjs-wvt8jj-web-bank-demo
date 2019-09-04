@@ -8,3 +8,4 @@ class IdentityStepCtrl {
     this.EnrollmentService.submitIdentity(this.identity);
   }
 }
+export default IdentityStepCtrl
