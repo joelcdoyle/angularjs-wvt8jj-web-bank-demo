@@ -1,7 +1,7 @@
-import EnrollmentSteps from "./enroll-steps.directive";
-import "./membership"
+import "./membership";
+import "./identity";
 
-let enrollStepsModule = angular.module("enroll.steps", ["enroll.steps.membership"]);
+let enrollStepsModule = angular.module("enroll.steps", ["enroll.steps.membership", "enroll.steps.identity"]);
 
 import StepsConfig from "./enroll-steps.config";
 enrollStepsModule.config(StepsConfig);
@@ -10,4 +10,3 @@ enrollStepsModule.config(StepsConfig);
 import IdentityConfig from './identity/identity-step.config';
 enrollStepsModule.config(IdentityConfig);
 
-enrollStepsModule.directive('enrollmentSteps', EnrollmentSteps);

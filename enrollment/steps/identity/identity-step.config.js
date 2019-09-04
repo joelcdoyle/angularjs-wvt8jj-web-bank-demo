@@ -1,13 +1,13 @@
-function EnrollmentIdentityStepConfig($stateProvider) {
+function IdentityStepConfig($stateProvider) {
   'ngInject';
 
   $stateProvider
   .state('enrollment.steps.identity', {
     url: '/identity',
-    controller: 'EnrollmentIdenityStepCtrl',
+    controller: 'IdenityStepCtrl',
     templateUrl: "./identity-step.html"
   });
 
 };
 
-export default EnrollmentIdentityStepConfig;
+export default IdentityStepConfig;
