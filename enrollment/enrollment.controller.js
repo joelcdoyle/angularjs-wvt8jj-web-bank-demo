@@ -6,7 +6,13 @@ class EnrollmentCtrl {
     $ctrl.activeIndex = 0;
     $ctrl.steps[0].active = true;
 
-    $state.go("enroll.steps.membership")
+    $state.go("enroll.steps.membership");
+
+    $scope.$on("advance-enrollment", (event, state) => {
+      console.log(state)
+      this.advanceEnrollment(state);
+      this.$state.go("enroll.steps." + state);
+    });
 
     // $uibModal.open({
     //   template: "<h1>Hello</h1>"
@@ -23,7 +29,7 @@ class EnrollmentCtrl {
     })
 
     this.steps.forEach((step) => {
-      if(step.state == state) {
+      if (step.state == state) {
         step.active = true;
       }
     });

@@ -3,6 +3,7 @@ class EnrollmentService {
   constructor($q, $rootScope) {
     "ngInject"
     this.$q = $q;
+    this.$rootScope = $rootScope;
   }
 
   getSteps() {
