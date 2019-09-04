@@ -7,7 +7,7 @@ class EnrollMembershipCtrl {
   }
 
   submitMembership(membership) {
-    this.EnrollmentService(membership)
+    this.EnrollmentService.submitMembership(membership)
   }
 }
 export default EnrollMembershipCtrl
