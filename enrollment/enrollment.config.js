@@ -3,7 +3,7 @@ function EnrollmentConfig($stateProvider) {
 
   $stateProvider
   .state('enroll', {
-    url: '/enroll',
+    url: '',
     controller: 'EnrollmentCtrl',
     controllerAs: '$ctrl',
     templateUrl: './enrollment.html',

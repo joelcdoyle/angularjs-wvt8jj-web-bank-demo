@@ -3,9 +3,6 @@ class EnrollmentCtrl {
     'ngInject';
     var $ctrl = this;
     $ctrl.steps = enrollmentSteps;
-    $ctrl.activeIndex = 0;
-    $ctrl.steps[0].active = true;
-
     $state.go("enroll.steps.membership");
 
     $scope.$on("advance-enrollment", (event, state) => {
