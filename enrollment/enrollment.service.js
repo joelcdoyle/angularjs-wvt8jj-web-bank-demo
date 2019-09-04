@@ -1,6 +1,6 @@
 class EnrollmentService {
 
-  constructor($q) {
+  constructor($q, $rootScope) {
     "ngInject"
     this.$q = $q;
   }
@@ -84,6 +84,20 @@ class EnrollmentService {
         id: "LEGAL"
       }
     ]);
+  }
+
+  submitMembership(membership) {
+    this.membership = membership;
+    this.advanceEnrollment("identity");
+  }
+
+  submitIdentity(identity) {
+    this.identity = identity;
+    this.advanceEnrollment("funding");
+  }
+
+  advanceEnrollment(state) {
+    $rootScope.$broadcast("advance-enrollment", state);
   }
 }
 

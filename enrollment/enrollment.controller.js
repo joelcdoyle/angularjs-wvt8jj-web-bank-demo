@@ -13,15 +13,22 @@ class EnrollmentCtrl {
     // });
   }
 
-  advanceEnrollment() {
+  advanceEnrollment(state) {
     if (!this.hasMoreSteps()) {
       return;
     }
-    this.activeIndex++;
+
     this.steps.forEach((step) => {
       step.active = false;
     })
-    this.steps[this.activeIndex].active = true;
+
+    this.steps.forEach((step) => {
+      if(step.state == state) {
+        step.active = true;
+      }
+    });
+
+
   }
 
   hasMoreSteps() {

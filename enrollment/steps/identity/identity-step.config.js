@@ -4,7 +4,7 @@ function EnrollmentIdentityStepConfig($stateProvider) {
   $stateProvider
   .state('enrollment.steps.identity', {
     url: '/identity',
-    // controller: 'EnrollmentIdenityStepCtrl',
+    controller: 'EnrollmentIdenityStepCtrl',
     templateUrl: "./identity-step.html"
   });
 

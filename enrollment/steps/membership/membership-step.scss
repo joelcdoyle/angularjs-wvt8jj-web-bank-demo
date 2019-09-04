@@ -4,8 +4,25 @@
   .membership-part {
     background: #fff;
     margin-right: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
     .membership-tile-title {
       text-align: center;
+      font-weight: bold;
+    }
+    .membership-tile-desc {
+      line-height: 1.2em;
+      font-size: 11px;
+    }
+    img {
+      width: 64px;
+    }
+    button {
+      color: #fff;
+      background-color: rgb(255, 166, 0);
     }
   }
 

@@ -1,9 +1,13 @@
 class EnrollMembershipCtrl {
-  constructor(membershipStep) {
+  constructor(membershipStep, EnrollmentService) {
     "ngInject";
-    console.log(membershipStep)
     let $ctrl = this;
+    this.EnrollmentService = EnrollmentService;
     $ctrl.step = membershipStep;
+  }
+
+  submitMembership(membership) {
+    this.EnrollmentService(membership)
   }
 }
 export default EnrollMembershipCtrl
