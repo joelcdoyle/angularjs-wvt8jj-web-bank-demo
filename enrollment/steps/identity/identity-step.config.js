@@ -9,6 +9,5 @@ function IdentityStepConfig($stateProvider) {
     templateUrl: "./identity-step.html"
   });
 
-};
-
+}
 export default IdentityStepConfig;
