@@ -1,12 +1,13 @@
 class IdentityStepCtrl {
-  constructor(identityStep, EnrollmentService) {
+  constructor(identityStep, EnrollmentService, $sce) {
     this.EnrollmentService = EnrollmentService;
     let $ctrl = this;
+    this.$sce = $sce;
     $ctrl.membership = EnrollmentService.membership;
 
-    $ctrl.partIndex = 0;
-    $ctrl.step = identityStep;
-    $ctrl.parts = identityStep.parts;
+    this.partIndex = 0;
+    this.step = identityStep;
+    this.parts = identityStep.parts;
     //console.log($ctrl.parts);
   }
 
@@ -16,14 +17,8 @@ class IdentityStepCtrl {
 
   nextPart() {
     this.partIndex++;
+    this.label = this.parts[this.partIndex].text;
   }
 
-  getPart(index) {
-    return this.parts[index];
-  }
-
-  getLabel(part) {
-    return this.parts[this.partIndex].text;
-  }
 }
 export default IdentityStepCtrl

@@ -48,7 +48,7 @@ class EnrollmentService {
         state: "identity",
         parts: [
           {
-            text: "What's your first name",
+            text: "<span>What's your first name?</span>",
             id: "1"
           },
           {
