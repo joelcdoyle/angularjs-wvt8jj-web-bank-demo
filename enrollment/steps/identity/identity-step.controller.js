@@ -5,9 +5,12 @@ class IdentityStepCtrl {
     this.$sce = $sce;
     $ctrl.membership = EnrollmentService.membership;
 
-    this.partIndex = 0;
     this.step = identityStep;
     this.parts = identityStep.parts;
+
+    this.partIndex = 0;
+    this.label = this.parts[this.partIndex].text;
+
     //console.log($ctrl.parts);
   }
 
@@ -18,6 +21,10 @@ class IdentityStepCtrl {
   nextPart() {
     this.partIndex++;
     this.label = this.parts[this.partIndex].text;
+  }
+
+  canNext() {
+    return this.partIndex < this.parts.length;
   }
 
 }

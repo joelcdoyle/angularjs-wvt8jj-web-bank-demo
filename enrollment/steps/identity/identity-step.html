@@ -1,13 +1,14 @@
 <div class="identity-step">
-  <div class="identity-reminder-membership">
-    <h2>Membership Type: {{$ctrl.membership.title}}</h2>
-  </div>
-	<h1>Identity</h1>
-	<div ng-animate-swap="$ctrl.partIndex">
-    <text-input label="$ctrl.label"></text-input>
+	<div class="identity-reminder-membership">
+		<h2>Membership Type: {{$ctrl.membership.title}}</h2>
 	</div>
-	<!-- <form name="$ctrl.identityForm" ng-submit="$ctrl.submitIdentity()">
+	<h1>Identity</h1>
+	<form name="$ctrl.identityForm" ng-submit="$ctrl.submitIdentity()">
+		<div ng-animate-swap="$ctrl.partIndex">
+			<text-input label="$ctrl.label"></text-input>
+			<button type="button" class="btn btn-round" ng-click="$ctrl.nextPart()" ng-disabled="$ctrl.canNext()">NEXT</button>
+	  </div>
+  </form>
 
-	</form> -->
-	<button type="button" class="btn btn-round" ng-click="$ctrl.nextPart()">NEXT</button>
+
 </div>
