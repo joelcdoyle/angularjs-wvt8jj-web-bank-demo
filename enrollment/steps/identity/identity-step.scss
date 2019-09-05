@@ -1,3 +1,36 @@
 .identity-step {
   color: #fff;
+  [ng-animate-swap] {
+    &.ng-enter {
+      position: absolute;
+      top: 180px;
+    }
+    &.ng-enter-active {
+      position: absolute;
+      top: 80px;
+
+    }
+    &.ng-leave {
+      position: absolute;
+      top: 80px;
+    }
+    &.ng-leave-active {
+      top: -100px;
+      position: absolute;
+    }
+  }
+
+  .control-label {
+    font-size: 18px;
+  }
+  input {
+    width: 250px;
+    background: rgba(0,0,0,0);
+    border: none;
+    border-bottom: 3px solid #fff;
+    outline: none;
+  }
+  input:focus {
+    outline: none !important;
+  }
 }

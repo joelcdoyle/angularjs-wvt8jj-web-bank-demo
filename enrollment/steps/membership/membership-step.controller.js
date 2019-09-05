@@ -4,11 +4,9 @@ class EnrollMembershipCtrl {
     let $ctrl = this;
     this.EnrollmentService = EnrollmentService;
     $ctrl.step = membershipStep;
-    console.log($transitions)
   }
 
   submitMembership(membership) {
-    console.log(membership)
     this.EnrollmentService.submitMembership(membership)
   }
 }

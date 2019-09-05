@@ -49,23 +49,28 @@ class EnrollmentService {
         parts: [
           {
             text: "<span>What's your first name?</span>",
-            id: "1"
+            id: "1",
+            defaultValue: ""
           },
           {
             text: "What's your last name?",
-            id: "2"
+            id: "2",
+            defaultValue: ""
           },
           {
             text: "What's your tyson.com <strong>email address</strong>",
-            id: "3"
+            id: "3",
+            defaultValue: ""
           },
           {
             text: "What's your <strong>phone number</strong>?",
-            id: "4"
+            id: "4",
+            defaultValue: ""
           },
           {
             text: "What's your <strong>social security number</strong>",
-            id: "5"
+            id: "5",
+            defaultValue: ""
           }
         ]
       },
