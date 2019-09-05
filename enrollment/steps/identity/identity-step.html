@@ -1,7 +1,13 @@
-<hi>Identity</hi>
-<form name="$ctrl.identityForm" ng-submit="$ctrl.submitIdentity()">
-  <div ng-animate-swap="$ctrl.partIndex">
-    <text-input label="{{part.text}}" ng-repeat="part in $ctrl.parts[$ctrl.partIndex]" model="$ctrl.idenity" ></text-input>
+<div class="identity-step">
+  <div class="identity-reminder-membership">
+    <h2>Membership Type: {{$ctrl.membership.title}}</h2>
   </div>
-</form>
-<button type="button" class="btn btn-round" ng-click="nextPart()">NEXT</button>
+	<h1>Identity</h1>
+	<div ng-animate-swap="$ctrl.partIndex">
+		{{$ctrl.partIndex}}
+	</div>
+	<!-- <form name="$ctrl.identityForm" ng-submit="$ctrl.submitIdentity()">
+
+	</form> -->
+	<button type="button" class="btn btn-round" ng-click="$ctrl.nextPart()">NEXT</button>
+</div>

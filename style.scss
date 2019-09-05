@@ -19,10 +19,24 @@ body {
   }
 }
 
-[ui-view] {
+[ui-view].enroll-step {
+
   &.ng-enter {
-    opacity: 0;
-    height: 0px;
+    position: absolute;
+    top: -500px;
+  }
+  &.ng-enter-active {
+    position: absolute;
+    top: 15px;
+
+  }
+  &.ng-leave {
+    position: absolute;
+    top: 15px;
+  }
+  &.ng-leave-active {
+    top: 500px;
+    position: absolute;
   }
 }
 .ng-enter, .ng-leave {
