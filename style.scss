@@ -18,3 +18,14 @@ body {
     margin: 0 auto;
   }
 }
+
+.ng-enter, .ng-leave {
+  transition: $ngTransition;
+}
+
+.ng-enter {
+  opacity: 0;
+}
+.ng-enter-active {
+  opacity: 1;
+}
