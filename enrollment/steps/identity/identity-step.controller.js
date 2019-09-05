@@ -24,6 +24,9 @@ class IdentityStepCtrl {
   }
 
   canNext() {
+    if(!this.partIndex || !this.parts) {
+      return false;
+    }
     return this.partIndex < this.parts.length;
   }
 
