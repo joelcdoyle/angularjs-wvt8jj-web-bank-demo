@@ -6,7 +6,17 @@ function IdentityStepConfig($stateProvider) {
     url: '/identity',
     controller: 'IdentityStepCtrl',
     controllerAs: "$ctrl",
-    templateUrl: "./identity-step.html"
+    templateUrl: "./identity-step.html",
+    resolve: {
+      identityStep($q, EnrollmentService) {
+        return EnrollmentService.getSteps().then((steps) => {
+          let identityStep = steps.find((step) => {
+            return step.state == "identity";
+          });
+          return $q.resolve(identityStep);
+        })
+      }
+    }
   });
 
 }

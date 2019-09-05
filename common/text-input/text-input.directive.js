@@ -7,12 +7,9 @@ export default function textInput() {
     require: ['^form'],
     scope: {
       required: "=",
-      name: "=",
+      name: "@",
       model: "=",
-      label: "="
-    },
-    link: function() {
-      
+      label: "@"
     },
     bindToController: true
   }

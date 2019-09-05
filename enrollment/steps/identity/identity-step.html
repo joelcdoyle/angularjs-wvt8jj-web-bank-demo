@@ -1,4 +1,7 @@
 <hi>Identity</hi>
 <form name="$ctrl.identityForm" ng-submit="$ctrl.submitIdentity()">
-  
+  <div ng-animate-swap="$ctrl.partIndex">
+    <text-input label="{{part.text}}" ng-repeat="part in $ctrl.parts[$ctrl.partIndex]" model="$ctrl.idenity" ></text-input>
+  </div>
 </form>
+<button type="button" class="btn btn-round" ng-click="nextPart()">NEXT</button>

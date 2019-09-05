@@ -19,6 +19,12 @@ body {
   }
 }
 
+[ui-view] {
+  &.ng-enter {
+    opacity: 0;
+    height: 0px;
+  }
+}
 .ng-enter, .ng-leave {
   transition: $ngTransition;
 }
@@ -26,6 +32,13 @@ body {
 .ng-enter {
   opacity: 0;
 }
-.ng-enter-active {
+.ng-enter.ng-enter-active {
   opacity: 1;
 }
+.ng-leave {
+  opacity: 1;
+}
+.ng-leave.ng-leave-active {
+  opacity: 0;
+}
+

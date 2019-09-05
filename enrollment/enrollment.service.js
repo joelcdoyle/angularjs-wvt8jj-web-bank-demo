@@ -48,11 +48,11 @@ class EnrollmentService {
         state: "identity",
         parts: [
           {
-            template: "What's your first name",
+            text: "What's your first name",
             id: "1"
           },
           {
-            text: "Hi {{$ctrl.name}}! What's your last name?",
+            text: "What's your last name?",
             id: "2"
           },
           {

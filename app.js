@@ -1,10 +1,9 @@
 import angular from 'angular';
 import '@uirouter/angularjs';
 import 'angular-ui-bootstrap';
-import ngAnimate from "angular-animate";
+import 'angular-animate';
 
-// Import your app stylesheets
-import './style.scss';
+
 
 // Import your app functionality
 import './enrollment'
@@ -12,11 +11,14 @@ import './enrollment'
 // Create and bootstrap application
 const requires = [
   'ui.router',
+  'ngAnimate',
   'ui.bootstrap',
-  'enrollment',
-
+  'enrollment'
 ];
 
 window.app = angular.module('app', requires);
 
 angular.bootstrap(document.getElementById('app'), ['app']);
+
+// Import your app stylesheets
+import './style.scss';

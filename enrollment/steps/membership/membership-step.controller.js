@@ -1,5 +1,5 @@
 class EnrollMembershipCtrl {
-  constructor(membershipStep, EnrollmentService) {
+  constructor(membershipStep, EnrollmentService, $timeout) {
     "ngInject";
     let $ctrl = this;
     this.EnrollmentService = EnrollmentService;
