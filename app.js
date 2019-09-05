@@ -2,6 +2,7 @@ import angular from 'angular';
 import '@uirouter/angularjs';
 import 'angular-ui-bootstrap';
 import 'angular-animate';
+import 'angular-sanitize';
 
 
 
@@ -12,6 +13,7 @@ import './enrollment'
 const requires = [
   'ui.router',
   'ngAnimate',
+  'ngSanitize',
   'ui.bootstrap',
   'enrollment'
 ];

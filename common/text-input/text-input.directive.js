@@ -9,7 +9,7 @@ export default function textInput() {
       required: "=",
       name: "@",
       model: "=",
-      label: "@"
+      label: "="
     },
     bindToController: true
   }

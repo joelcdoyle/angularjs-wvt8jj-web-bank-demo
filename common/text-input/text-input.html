@@ -1,4 +1,4 @@
-<div class="form-input">
-  <div class="text-input-hint">{{$ctrl.label}}</div>
-  <input type="text" name="{{$ctrl.name}}" ng-model="$ctrl.model" placeholder="{{$ctrl.placeholder}}">
+<div class="form-group">
+  <div class="text-input-hint" ng-bind-html="$ctrl.label"></div>
+  <input type="text" class="form-control" name="{{$ctrl.name}}" ng-model="$ctrl.model" placeholder="{{$ctrl.placeholder}}">
 </div>

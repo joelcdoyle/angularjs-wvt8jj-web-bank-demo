@@ -17,5 +17,13 @@ class IdentityStepCtrl {
   nextPart() {
     this.partIndex++;
   }
+
+  getPart(index) {
+    return this.parts[index];
+  }
+
+  getLabel(part) {
+    return this.parts[this.partIndex].text;
+  }
 }
 export default IdentityStepCtrl
