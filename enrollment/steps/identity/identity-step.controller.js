@@ -7,7 +7,7 @@ class IdentityStepCtrl {
 
     this.step = identityStep;
     this.parts = identityStep.parts;
-    this.partModels = [];
+    this.partModels = {};
 
     this.partIndex = 0;
     this.label = this.parts[this.partIndex].text;

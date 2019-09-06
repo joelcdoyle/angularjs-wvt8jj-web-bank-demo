@@ -50,26 +50,31 @@ class EnrollmentService {
           {
             text: "<span>What's your first name?</span>",
             id: "1",
+            key: "firstName",
             defaultValue: ""
           },
           {
             text: "What's your last name?",
             id: "2",
+            key: "lastName",
             defaultValue: ""
           },
           {
             text: "What's your tyson.com <strong>email address</strong>",
             id: "3",
+            key: "email",
             defaultValue: ""
           },
           {
             text: "What's your <strong>phone number</strong>?",
             id: "4",
+            key: "phone",
             defaultValue: ""
           },
           {
             text: "What's your <strong>social security number</strong>",
             id: "5",
+            key: "ssn",
             defaultValue: ""
           }
         ]

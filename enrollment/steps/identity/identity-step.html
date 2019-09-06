@@ -5,10 +5,11 @@
 	</div>
 	<form name="$ctrl.identityForm" ng-submit="$ctrl.submitIdentity()">
 		<div ng-animate-swap="$ctrl.partIndex">
-			<text-input label="$ctrl.label" model="" focus-me="$ctrl.partIndex + 1 > 0"></text-input>
+			<text-input label="$ctrl.label" model="$ctrl.partModels[$ctrl.partIndex]" focus-me="$ctrl.partIndex + 1 > 0"></text-input>
 			<button type="button" class="btn btn-round" ng-click="$ctrl.nextPart()" ng-disabled="!$ctrl.canNext()">NEXT</button>
 	  </div>
   </form>
 
+  <div>{{$ctrl.partModels}}</div>
 
 </div>
