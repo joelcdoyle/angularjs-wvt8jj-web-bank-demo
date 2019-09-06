@@ -1,4 +1,9 @@
 .identity-step {
+  .identity-reminder-membership {
+    h3 {
+      margin-top: 0px;
+    }
+  }
   color: #fff;
   [ng-animate-swap] {
     &.ng-enter {
@@ -25,7 +30,7 @@
     margin-bottom: 20px;
   }
   input {
-    width: 250px;
+    width: 350px;
     border-radius: 0px;
     background: rgba(0,0,0,0);
     border: none;
