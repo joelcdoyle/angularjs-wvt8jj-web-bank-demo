@@ -23,7 +23,7 @@ body {
 
   &.ng-enter {
     position: absolute;
-    top: -500px;
+    top: 500px;
   }
   &.ng-enter-active {
     position: absolute;
@@ -35,7 +35,7 @@ body {
     top: 15px;
   }
   &.ng-leave-active {
-    top: 500px;
+    top: -500px;
     position: absolute;
   }
 }
