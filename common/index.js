@@ -6,6 +6,7 @@ import './tile.scss';
 import './button.scss';
 import './text-input';
 import './phone-input';
+import './ssn-input';
 import './focus-me';
 
 // Create the module where our functionality can attach to
@@ -15,6 +16,7 @@ let commonModule = angular.module('common',
     'progress-bar', 
     'text-input', 
     'common.phone-input', 
+    'common.ssn-input',
     'common.focus-me'
   ]);
 
