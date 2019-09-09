@@ -10,8 +10,8 @@ class IdentityStepCtrl {
     this.partModels = {};
 
     this.partIndex = 0;
-    this.label = this.parts[this.partIndex].text;
-    this.key = this.parts[this.partIndex].key;
+
+    this.currentPart = this.parts[this.partIndex];
 
     this.parts.forEach((part) => {
       this.partModels[part.key] = part.defaultValue;
@@ -26,12 +26,11 @@ class IdentityStepCtrl {
 
   nextPart() {
     this.partIndex++;
-    this.label = this.parts[this.partIndex].text;
-    this.key = this.parts[this.partIndex].key;
+    this.currentPart = this.parts[this.partIndex];
   }
 
   canNext() {
-    if(this.partIndex == null || this.parts == null) {
+    if (this.partIndex == null || this.parts == null) {
       return false;
     }
     return this.partIndex < this.parts.length - 1;

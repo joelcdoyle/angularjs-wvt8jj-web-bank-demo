@@ -2,6 +2,7 @@ export default function phoneInput() {
   'ngInject';
   return {
     templateUrl: './phone-input.html',
+    controllerAs: "$ctrl",
     require: ['^form'],
     scope: {
       name: "@",

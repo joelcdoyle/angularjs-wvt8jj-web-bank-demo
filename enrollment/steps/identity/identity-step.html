@@ -5,7 +5,18 @@
 	</div>
 	<form name="$ctrl.identityForm" ng-submit="$ctrl.submitIdentity()">
 		<div ng-animate-swap="$ctrl.partIndex">
-			<text-input label="$ctrl.label" model="$ctrl.partModels[$ctrl.key]" focus-me="$ctrl.partIndex + 1 > 0"></text-input>
+      <div ng-switch="$ctrl.currentPart.key">
+        <div ng-switch-when="phone">
+          <phone-input label="$ctrl.currentPart.text" model="$ctrl.partModels[$ctrl.currentPart.key]" focus-me="$ctrl.partIndex + 1 > 0"></phone-input>
+        </div>
+        <div ng-switch-when="firstName">
+          <text-input label="$ctrl.currentPart.text" model="$ctrl.partModels[$ctrl.currentPart.key]" focus-me="$ctrl.partIndex + 1 > 0"></text-input>
+        </div>
+        <div ng-switch-when="lastName">
+          <text-input label="$ctrl.currentPart.text" model="$ctrl.partModels[$ctrl.currentPart.key]" focus-me="$ctrl.partIndex + 1 > 0"></text-input>
+        </div>
+      </div>
+			
 			<button type="button" class="btn btn-round" ng-click="$ctrl.nextPart()" ng-disabled="!$ctrl.canNext()">NEXT</button>
 	  </div>
   </form>
