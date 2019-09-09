@@ -11,11 +11,11 @@ export default function phoneInput() {
     },
     bindToContrller: true,
     link: function(scope, elem, attrs, ) {
-      let ngModel = elem.controller('ngModel');
+      let ngModel = elem.find('input').controller('ngModel');
 
       ngModel.$parsers.push((value) => {
         let numbers = value.replace(/\D/g, '').match(/(\d{0,3})(\d{0,3})(\d{0,4})/);
-        ngModel.$setViewValue(!x[2] ? x[1] : '(' + x[1] + ') ' + x[2] + (x[3] ? '-' + x[3] : ''));
+        ngModel.$setViewValue(!numbers[2] ? numbers[1] : '(' + numbers[1] + ') ' + numbers[2] + (numbers[3] ? '-' + numbers[3] : ''));
         ngModel.$render();
       })
     }
