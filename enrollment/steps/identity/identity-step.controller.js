@@ -33,7 +33,7 @@ class IdentityStepCtrl {
     if (this.partIndex == null || this.parts == null) {
       return false;
     }
-    return this.partIndex < this.parts.length - 1;
+    return this.partIndex <= this.parts.length;
   }
 
 }

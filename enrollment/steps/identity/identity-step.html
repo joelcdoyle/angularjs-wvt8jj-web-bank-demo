@@ -28,7 +28,7 @@
           model="$ctrl.partModels[$ctrl.currentPart.key]" focus-me="$ctrl.partIndex + 1 > 0"></email-input>
 				</div>
 			</div>
-
+      {{$ctrl.identityForm['phone']}}
 			<button type="button" class="btn btn-round" 
         ng-click="$ctrl.identityForm[$ctrl.currentPart.key].$valid && $ctrl.nextPart()" ng-disabled="$ctrl.identityForm[$ctrl.currentPart.key].$invalid || !$ctrl.canNext()">NEXT</button>
 	  </div>

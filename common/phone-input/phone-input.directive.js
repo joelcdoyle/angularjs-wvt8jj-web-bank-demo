@@ -16,8 +16,10 @@ export default function phoneInput() {
 
       ngModel.$parsers.push((value) => {
         let numbers = value.replace(/\D/g, '').match(/(\d{0,3})(\d{0,3})(\d{0,4})/);
-        ngModel.$setViewValue(!numbers[2] ? numbers[1] : '(' + numbers[1] + ') ' + numbers[2] + (numbers[3] ? '-' + numbers[3] : ''));
+        let phone = !numbers[2] ? numbers[1] : '(' + numbers[1] + ') ' + numbers[2] + (numbers[3] ? '-' + numbers[3] : '');
+        ngModel.$setViewValue(phone);
         ngModel.$render();
+        return phone;
       })
     }
   }
