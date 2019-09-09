@@ -10,7 +10,7 @@ export default function phoneInput() {
       model: "=",
       label: "="
     },
-    bindToContrller: true,
+    bindToController: true,
     link: function(scope, elem, attrs, ) {
       let ngModel = elem.find('input').controller('ngModel');
 
@@ -24,8 +24,7 @@ export default function phoneInput() {
 }
 
 class PhoneInputCtrl {
-    constructor() {
+  constructor() {
     'ngInject';
-    var $ctrl = this;
   }
 }

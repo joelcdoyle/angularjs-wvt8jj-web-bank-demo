@@ -1,23 +1,24 @@
 export default function textInput() {
   'ngInject';
   return {
-    controller: TextInput,
+    controller: TextInputCtrl,
     templateUrl: './text-input.html',
     controllerAs: '$ctrl',
     require: ['^form'],
     scope: {
-      required: "=",
       name: "@",
       model: "=",
       label: "="
     },
-    bindToController: true
+    bindToController: true,
+    link: function() {
+      
+    }
   }
 }
 
-class TextInput {
+class TextInputCtrl {
   constructor() {
     'ngInject';
-    var $ctrl = this;
   }
 }

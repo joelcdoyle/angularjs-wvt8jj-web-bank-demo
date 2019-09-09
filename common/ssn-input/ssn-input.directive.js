@@ -1,6 +1,7 @@
 export default function ssnInput() {
   'ngInject';
   return {
+    controller: SsnInputCtrl,
     templateUrl: './ssn-input.html',
     controllerAs: "$ctrl",
     require: ['^form'],
@@ -9,7 +10,7 @@ export default function ssnInput() {
       model: "=",
       label: "="
     },
-    bindToContrller: true,
+    bindToController: true,
     link: function(scope, elem, attrs, ) {
       let ngModel = elem.find('input').controller('ngModel');
 
@@ -19,5 +20,11 @@ export default function ssnInput() {
         ngModel.$render();
       })
     }
+  }
+}
+
+class SsnInputCtrl {
+  constructor() {
+    
   }
 }

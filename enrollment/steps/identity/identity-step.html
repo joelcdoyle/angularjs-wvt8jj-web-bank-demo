@@ -8,20 +8,29 @@
 			<div ng-switch="$ctrl.currentPart.key">
 
 				<div ng-switch-when="firstName">
-					<text-input label="$ctrl.currentPart.text" model="$ctrl.partModels[$ctrl.currentPart.key]" focus-me="$ctrl.partIndex + 1 > 0"></text-input>
+					<text-input label="$ctrl.currentPart.text" name="{{$ctrl.currentPart.key}}" 
+          model="$ctrl.partModels[$ctrl.currentPart.key]" focus-me="$ctrl.partIndex + 1 > 0"></text-input>
 				</div>
 				<div ng-switch-when="lastName">
-					<text-input label="$ctrl.currentPart.text" model="$ctrl.partModels[$ctrl.currentPart.key]" focus-me="$ctrl.partIndex + 1 > 0"></text-input>
+					<text-input label="$ctrl.currentPart.text" name="{{$ctrl.currentPart.key}}" 
+          model="$ctrl.partModels[$ctrl.currentPart.key]" focus-me="$ctrl.partIndex + 1 > 0"></text-input>
 				</div>
 				<div ng-switch-when="ssn">
-					<ssn-input label="$ctrl.currentPart.text" model="$ctrl.partModels[$ctrl.currentPart.key]" focus-me="$ctrl.partIndex + 1 > 0"></ssn-input>
+					<ssn-input label="$ctrl.currentPart.text" name="{{$ctrl.currentPart.key}}" 
+          model="$ctrl.partModels[$ctrl.currentPart.key]" focus-me="$ctrl.partIndex + 1 > 0"></ssn-input>
 				</div>
-        <div ng-switch-when="phone">
-          <phone-input label="$ctrl.currentPart.text" model="$ctrl.partModels[$ctrl.currentPart.key]" focus-me="$ctrl.partIndex + 1 > 0"></phone-input>
-        </div>
+				<div ng-switch-when="phone">
+					<phone-input label="$ctrl.currentPart.text" name="{{$ctrl.currentPart.key}}" 
+          model="$ctrl.partModels[$ctrl.currentPart.key]" focus-me="$ctrl.partIndex + 1 > 0"></phone-input>
+				</div>
+				<div ng-switch-when="email">
+					<email-input label="$ctrl.currentPart.text" name="{{$ctrl.currentPart.key}}" 
+          model="$ctrl.partModels[$ctrl.currentPart.key]" focus-me="$ctrl.partIndex + 1 > 0"></email-input>
+				</div>
 			</div>
 
-			<button type="button" class="btn btn-round" ng-click="$ctrl.nextPart()" ng-disabled="!$ctrl.canNext()">NEXT</button>
+			<button type="button" class="btn btn-round" 
+        ng-click="$ctrl.identityForm[$ctrl.currentPart.key].$valid && $ctrl.nextPart()" ng-disabled="$ctrl.identityForm[$ctrl.currentPart.key].$invalid || !$ctrl.canNext()">NEXT</button>
 	  </div>
   </form>
 

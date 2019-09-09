@@ -6,6 +6,7 @@ import './tile.scss';
 import './button.scss';
 import './text-input';
 import './phone-input';
+import './email-input';
 import './ssn-input';
 import './focus-me';
 
@@ -17,6 +18,7 @@ let commonModule = angular.module('common',
     'text-input', 
     'common.phone-input', 
     'common.ssn-input',
+    'common.email-input',
     'common.focus-me'
   ]);
 
