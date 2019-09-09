@@ -1,6 +1,7 @@
 export default function phoneInput() {
   'ngInject';
   return {
+    controller: PhoneInputCtrl,
     templateUrl: './phone-input.html',
     controllerAs: "$ctrl",
     require: ['^form'],
@@ -19,5 +20,12 @@ export default function phoneInput() {
         ngModel.$render();
       })
     }
+  }
+}
+
+class PhoneInputCtrl {
+    constructor() {
+    'ngInject';
+    var $ctrl = this;
   }
 }

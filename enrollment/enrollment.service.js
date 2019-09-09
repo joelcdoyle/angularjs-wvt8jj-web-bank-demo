@@ -54,7 +54,7 @@ class EnrollmentService {
             defaultValue: ""
           },
           {
-            text: "What's your last name?",
+            text: "<span>What's your last name?</span>",
             id: "2",
             key: "lastName",
             defaultValue: ""
