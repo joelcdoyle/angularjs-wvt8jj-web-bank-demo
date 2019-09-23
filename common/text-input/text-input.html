@@ -1,4 +1,5 @@
-<div class="form-group">
+<div class="form-group text-input">
   <div class="control-label text-input-hint" ng-bind-html="$ctrl.label"></div>
   <input type="text" class="form-control" name="{{$ctrl.name}}" ng-model="$ctrl.model" placeholder="{{$ctrl.placeholder}}" autofocus required autocomplete="false">
+  <img class="success-icon" ng-show="$ctrl.form[$ctrl.name].$valid" ng-src="https://github.com/joelcdoyle/angularjs-wvt8jj-web-bank-demo/blob/master/success.png?raw=true" alt="Success">
 </div>

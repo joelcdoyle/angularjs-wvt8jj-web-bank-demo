@@ -1,3 +1,11 @@
 .form-input {
   color: #fff;
 }
+.text-input {
+  input {
+    display: inline;
+  }
+  img.success-icon {
+    width: 60px;
+  }
+}
