@@ -6,6 +6,9 @@
     display: inline;
   }
   img.success-icon {
-    width: 60px;
+    width: 40px;
+    &.ng-hide.ng-hide-animate {
+      display: none;
+    }
   }
 }

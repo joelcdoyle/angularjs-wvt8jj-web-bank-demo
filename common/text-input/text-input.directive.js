@@ -11,8 +11,8 @@ export default function textInput() {
       label: "="
     },
     bindToController: true,
-    link: function() {
-      
+    link: function () {
+      scope.$ctrl.form = form[0];
     }
   }
 }
@@ -20,5 +20,8 @@ export default function textInput() {
 class TextInputCtrl {
   constructor() {
     'ngInject';
+  }
+  showSuccess() {
+    return this.form[this.name].$valid;
   }
 }
