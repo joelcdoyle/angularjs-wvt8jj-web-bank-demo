@@ -5,7 +5,7 @@
   input {
     display: inline;
   }
-  img.success-icon {
+  img.success-icon, img.failure-icon {
     width: 40px;
     &.ng-hide.ng-hide-animate {
       display: none;

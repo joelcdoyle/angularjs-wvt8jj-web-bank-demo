@@ -11,7 +11,7 @@ export default function textInput() {
       label: "="
     },
     bindToController: true,
-    link: function () {
+    link: function (scope, elem, attr, form) {
       scope.$ctrl.form = form[0];
     }
   }

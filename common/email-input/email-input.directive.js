@@ -10,12 +10,18 @@ export default function emailInput() {
       model: "=",
       label: "="
     },
-    bindToController: true
+    bindToController: true,
+    link: function (scope, elem, attr, form) {
+      scope.$ctrl.form = form[0];
+    }
   }
 }
 
 class EmailInputCtrl {
   constructor() {
     'ngInject';
+  }
+  showSuccess() {
+    return this.form[this.name].$valid;
   }
 }
